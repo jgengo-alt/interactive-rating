@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <div class="card">
+    <div id="voting" class="voting">
+      <div class="card--header circle">
+        <img src="images/icon-star.svg" alt="logo">
+      </div>
+      <h2 class="mt-30">How did we do?</h2>
+      <p class="card--desc mt-10">Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+      <div class="ratings mt-20">
+        <div id="rating-1" class="rating" onClick="setGrade(1)">1</div>
+        <div id="rating-2" class="rating" onClick="setGrade(2)">2</div>
+        <div id="rating-3" class="rating" onClick="setGrade(3)">3</div>
+        <div id="rating-4" class="rating" onClick="setGrade(4)">4</div>
+        <div id="rating-5" class="rating" onClick="setGrade(5)">5</div>
+      </div>
+      <button class="btn mt-30" onclick="vote()">Submit</button>
+    </div>
+    <div id="voted" class="success hidden">
+      <img src="./images/illustration-thank-you.svg" alt="">
+      <div class="mt-10 success--rating">You selected <span id='grade'>4</span> out of 5</div>
+      <h2>Thank you!</h2>
+      <p class="card--desc">We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
